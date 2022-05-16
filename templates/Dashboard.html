@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Dashboard</title>
+
+        <link rel="stylesheet" href="../static/css/style_base.css">
+        <link rel="stylesheet" href="../static/css/style_partA.css">
+        <link rel="stylesheet" href="../static/css/style_partB.css">
+        <script src="../static/js/multiselect-dropdown.js" ></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script  type="text/javascript">
+            $(document).ready(function(){
+
+                $('#select-single').on('change', function() {
+                    $(".graph").hide();
+                    $('#' + $(this).val()).show();
+                });
+
+                $('#select-multi').on('change', function() {
+                    $(".graph").hide();
+                    $('#select-multi option:selected').each(function(){ 
+                        $('#' + $(this).val()).show();
+                    });
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="A_0 parent_verti">
+            <div class="A_1 parent_hori">
+                <div class="A_2_logo">
+                    LOGO
+                </div>
+                <div class="A_2_menu parent_hori">
+                    <div>
+                        HOME
+                    </div>
+                    <div>
+                        OPTION1
+                    </div>
+                    <div>
+                        OPTION2
+                    </div>
+                </div>
+                <div class="A_2_login">
+                    LOGIN
+                </div>
+            </div>
+        </div>
+
+        <div class="B_0 parent_verti">
+
+            <div class="B_1_selections parent_hori">
+                <div class="">
+                    <label>Choose a graph:</label>
+                    <select id="select-single">
+                        <option value="ghge">Greenhouse Gas Emission</option>
+                        <option value="wholesales">Wholesales</option>
+                        <option value="re">RE</option>
+                        <option value="tariff">Tariff</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label>Choose graphs:</label>
+                    <select id="select-multi" style="width: 20em;" multiple="multiple" multiselect-hide-x="true">
+                        <option value="ghge">Greenhouse Gas Emission</option>
+                        <option value="wholesales">Wholesales</option>
+                        <option value="re">RE</option>
+                        <option value="tariff">Tariff</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="B_1_graphs parent_hori scroll_container">
+                <div id="ghge" class="graph">
+                    {% include 'graph_ghge_1.html' %}
+                </div>
+                <div id="wholesales" class="graph">
+                    {% include 'graph_wholesales_1.html' %}
+                </div>
+                <div id="re" class="graph">
+                    {% include 'graph_re_1.html' %}
+                </div>
+                <div id="tariff" class="graph">
+                    {% include 'graph_tariff_1.html' %}
+                </div>
+                <div id="ghge" class="graph">
+                    {% include 'graph_ghge_2.html' %}
+                </div>
+                <div id="wholesales" class="graph">
+                    {% include 'graph_wholesales_2.html' %}
+                </div>
+                <div id="re" class="graph">
+                    {% include 'graph_re_2.html' %}
+                </div>
+                <div id="tariff" class="graph">
+                    {% include 'graph_tariff_2.html' %}
+                </div>
+                
+            </div>
+
+            <div class="B_1_panel parent_hori">
+                <div class="B_2_inputs parent_hori">
+                    <div class="B_3_inputs_group input_group_1 parent_verti">
+                        <div class="input_group_title">INPUT GROUP 1</div>
+                        <div class="input_div">
+                            INPUT 1
+                        </div>
+                        <div class="input_div">
+                            INPUT 2
+                        </div>
+                        <div class="input_div">
+                            INPUT 3
+                        </div>
+                        <div class="input_div">
+                            INPUT 4
+                        </div>
+                        <div class="input_div">
+                            INPUT 5
+                        </div>
+                        <div class="input_div">
+                            INPUT 6
+                        </div>
+                    </div>
+                    <div class="B_3_inputs_group input_group_2 parent_verti">
+                        <div class="input_group_title">INPUT GROUP 1</div>
+                        <div class="input_div">
+                            INPUT 1
+                        </div>
+                        <div class="input_div">
+                            INPUT 2
+                        </div>
+                        <div class="input_div">
+                            INPUT 3
+                        </div>
+                        <div class="input_div">
+                            INPUT 4
+                        </div>
+                        <div class="input_div">
+                            INPUT 5
+                        </div>
+                        <div class="input_div">
+                            INPUT 6
+                        </div>
+                    </div>
+                    <div class="B_3_inputs_group input_group_3 parent_verti">
+                        <div class="input_group_title">INPUT GROUP 1</div>
+                        <div class="input_div">
+                            INPUT 1
+                        </div>
+                        <div class="input_div">
+                            INPUT 2
+                        </div>
+                        <div class="input_div">
+                            INPUT 3
+                        </div>
+                        <div class="input_div">
+                            INPUT 4
+                        </div>
+                        <div class="input_div">
+                            INPUT 5
+                        </div>
+                        <div class="input_div">
+                            INPUT 6
+                        </div>
+                        <div class="input_div">
+                            INPUT 7
+                        </div>
+                        <div class="input_div">
+                            INPUT 8
+                        </div>
+                    </div>
+                </div>
+                <div class="B_2_stats parent_verti">
+                    <div class="">
+                        STATS 1
+                    </div>
+                    <div class="">
+                        STATS 2
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+            
+
+       
+        
+        
+    </body>
+</html>

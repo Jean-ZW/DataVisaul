@@ -1,0 +1,57 @@
+body{
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    background:linear-gradient(rgba(123, 196, 245, 0.3) ,rgba(247, 137, 225, 0.3));
+    
+    
+}
+div{
+    /* border: black 1px dashed; */
+    /* padding: 5px; */
+}
+object{
+    width: 100%;
+    height: 100%;
+}
+
+.parent_verti{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+}
+
+.parent_hori{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify; 
+    -webkit-box-align: center;
+}
+
+.lv1_title{
+    font-size: 15px;
+}
+
+
+/* for scrollbar */
+
+div.scroll_container{
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+div.scroll_container::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+div.scroll_container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+    box-shadow: none;
+    background: rgba(246, 177, 2, 0.7);
+}
+div.scroll_container::-webkit-scrollbar-track{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(246, 177, 2, 0.4);
+    box-shadow: inset;
+}

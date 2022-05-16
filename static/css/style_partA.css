@@ -1,0 +1,41 @@
+.A_0{
+    color: aliceblue;
+    height: auto; 
+    width:100%;
+    background:rgba(246, 177, 2, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+.A_1{
+    width: 85%;
+}
+.A_2_logo{
+    
+}
+.A_2_menu{
+    text-align: center;
+    width: 75%;
+    border-bottom: 3px rgb(255, 234, 181) solid;
+    
+    -webkit-box-pack: start;
+}
+.A_2_menu>div{
+    /* border: 1px solid black; */
+    padding: 3px;
+    font-size: 20px;
+    /* -webkit-box-flex: 1; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 150px;
+    margin-inline: 5px;
+}
+.A_2_menu>div:hover{
+    background-color: rgb(255, 234, 181);
+    color: rgba(140, 89, 0, 0.9);
+    cursor: pointer;
+}
+.A_2_login{
+    
+}
